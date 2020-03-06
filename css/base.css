@@ -16,6 +16,10 @@ html {
   font-family: "Inter", sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 main,
 footer {
   position: relative;
