@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experimental code – Lars Mäder</title>
+    <meta name="author" content="Lars Mäder" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+  </head>
+  <body>
+    <main>
+        <div class="navigation grid-middle-noBottom">
+          <div class="col">
+            <a href="https://nma93.github.io/creative_code" alt="Go back a webring experiment">← Back</a>
+          </div>
+          <div class="col">
+              <span class="caps black">WEBRING</span>
+            </div>
+          <div class="col">
+            <a href="https://stfffchs.github.io/designcodeexperiment/" alt="Go to the next webring experiment">Next →</a>
+          </div>
+        </div>
+      <div class="grid">
+        <div class="col-12">
+          <h1>Experimental Code</h1>
+          <h2>Module «Code Design Experiment»</h2>
+          <h3>IAD 2017</h3>
+          <p>Test</p>
+        </div>
+        <div class="col">
+          <div class="item item--bg theme-2">
+            <div
+              class="item-img"
+              data-displacement="img/displacement/4.png"
+              data-intensity="-0.65"
+              data-speedIn="1.2"
+              data-speedOut="1.2"
+            >
+              <img src="img/Img22.jpg" alt="Image" />
+              <img src="img/Img21.jpg" alt="Image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simplefocus-flowtype-js@1.1.0/flowtype.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="js/hover.js"></script>
+    <script>
+      Array.from(document.querySelectorAll(".item-img")).forEach(el => {
+        const imgs = Array.from(el.querySelectorAll("img"));
+        new hoverEffect({
+          parent: el,
+          intensity: el.dataset.intensity || undefined,
+          speedIn: el.dataset.speedin || undefined,
+          speedOut: el.dataset.speedout || undefined,
+          easing: el.dataset.easing || undefined,
+          hover: el.dataset.hover || undefined,
+          image1: imgs[0].getAttribute("src"),
+          image2: imgs[1].getAttribute("src"),
+          displacementImage: el.dataset.displacement
+        });
+      });
+      $("body").flowtype({
+        minimum: 500,
+        maximum: 1200,
+        minFont: 12,
+        maxFont: 56,
+      });
+      $("p").flowtype({
+        minFont: 16,
+        maxFont: 24
+      });
+    </script>
+  </body>
+</html>

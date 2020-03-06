@@ -1,0 +1,133 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css");
+
+/* Var */
+
+:root {
+  --font-color: rgb(20, 19, 22);
+  --link-color-hover: rgb(23, 165, 153);
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+  padding: 80px 80px 80px 80px;
+  color: var(--font-color);
+}
+
+/* Navigation */
+
+.navigation {
+  background-color: rgba(255, 255, 255, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  backdrop-filter: blur(12px);
+  border-bottom: 3px solid black;
+  z-index: 9000;
+  text-align: center;
+}
+
+/* Typo */
+
+.black {
+  font-weight: 900;
+  letter-spacing: -0.011em;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+body,
+p {
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+h4 {
+  font-size: 1.5em;
+}
+h5 {
+  font-size: 1.25em;
+}
+
+a, a:link:visited:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-color-hover);
+}
+
+/* Basic */
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.item--bg {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 500px;
+}
+
+.item-img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.item-img canvas {
+  height: 100%;
+}
+
+.item-img img {
+  height: 100%;
+  display: block;
+}
+
+.item-img img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.item:hover .item-img img:nth-child(2) {
+  opacity: 1;
+}
+
+.item-img img {
+  display: none;
+}
