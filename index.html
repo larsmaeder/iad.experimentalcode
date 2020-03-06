@@ -8,27 +8,63 @@
     <link rel="stylesheet" type="text/css" href="css/base.css" />
   </head>
   <body>
-    <main>
-        <div class="navigation grid-middle-noBottom">
-          <div class="col">
-            <a href="https://nma93.github.io/creative_code" alt="Go back a webring experiment">← Back</a>
-          </div>
-          <div class="col">
-              <span class="caps black">WEBRING</span>
-            </div>
-          <div class="col">
-            <a href="https://stfffchs.github.io/designcodeexperiment/" alt="Go to the next webring experiment">Next →</a>
-          </div>
-        </div>
-      <div class="grid">
-        <div class="col-12">
-          <h1>Experimental Code</h1>
-          <h2>Module «Code Design Experiment»</h2>
-          <h3>IAD 2017</h3>
-          <p>Test</p>
+    <header>
+      <nav class="navigation grid-middle-noBottom">
+        <div class="col">
+          <a
+            href="https://nma93.github.io/creative_code"
+            alt="Go back a webring experiment"
+            >← Back</a
+          >
         </div>
         <div class="col">
-          <div class="item item--bg theme-2">
+          <span class="caps black">WEBRING</span>
+        </div>
+        <div class="col">
+          <a
+            href="https://stfffchs.github.io/designcodeexperiment/"
+            alt="Go to the next webring experiment"
+            >Next →</a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="grid-1">
+        <div class="col">
+          <p>Experimental</p>
+          <h1>Hover Distortion</h1>
+        </div>
+        <div class="col">
+          <div class="item item--bg">
+            <div
+              class="item-img"
+              data-displacement="img/displacement/8.jpg"
+              data-intensity="-0.65"
+              data-speedIn="1.2"
+              data-speedOut="1.2"
+            >
+              <img src="img/5.jpg" alt="Image" />
+              <img src="img/6.jpg" alt="Image" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="item item--bg">
+            <div
+              class="item-img"
+              data-displacement="img/displacement/7.jpg"
+              data-intensity="-0.65"
+              data-speedIn="1.2"
+              data-speedOut="1.2"
+            >
+              <img src="img/1.jpg" alt="Image" />
+              <img src="img/2.jpg" alt="Image" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="item item--bg">
             <div
               class="item-img"
               data-displacement="img/displacement/4.png"
@@ -36,13 +72,48 @@
               data-speedIn="1.2"
               data-speedOut="1.2"
             >
-              <img src="img/Img22.jpg" alt="Image" />
-              <img src="img/Img21.jpg" alt="Image" />
+              <img src="img/3.jpg" alt="Image" />
+              <img src="img/4.jpg" alt="Image" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="item item--bg">
+            <div
+              class="item-img"
+              data-displacement="img/displacement/14.jpg"
+              data-intensity="-0.65"
+              data-speedIn="1.2"
+              data-speedOut="1.2"
+            >
+              <img src="img/7.jpg" alt="Image" />
+              <img src="img/8.jpg" alt="Image" />
             </div>
           </div>
         </div>
       </div>
     </main>
+    <footer>
+      <div class="grid">
+        <div class="col">
+          <p>
+            This site and larsmaeder/iad.experimentalcode is licensed under the GLWTP License. Click
+            <a
+              href="https://github.com/larsmaeder/iad.experimentalcode/blob/master/LICENSE"
+              >here</a
+            >
+            for more information.
+          </p>
+          <p>
+            Grab the code on
+            <a href="https://github.com/larsmaeder/iad.experimentalcode"
+              >Github</a
+            >.
+          </p>
+        </div>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/simplefocus-flowtype-js@1.1.0/flowtype.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
@@ -65,10 +136,11 @@
         });
       });
       $("body").flowtype({
-        minimum: 500,
-        maximum: 1200,
-        minFont: 12,
-        maxFont: 56,
+        minimum: 576,
+        maximum: 1280,
+        minFont: 16,
+        maxFont: 96,
+        fontRatio: 50
       });
       $("p").flowtype({
         minFont: 16,

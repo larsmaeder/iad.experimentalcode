@@ -6,28 +6,36 @@
 
 :root {
   --font-color: rgb(20, 19, 22);
+  --font-color-light: rgb(204, 204, 204);
   --link-color-hover: rgb(23, 165, 153);
+  --font-weight-title: 900;
+  --ls-heading: -0.011em;
 }
 
 html {
   font-family: "Inter", sans-serif;
 }
 
-main {
+main,
+footer {
   position: relative;
   margin: 0 auto;
-  padding: 80px 80px 80px 80px;
+  padding: 80px;
+}
+
+main {
   color: var(--font-color);
+}
+
+footer {
+  color: var(--font-color-light);
 }
 
 /* Navigation */
 
 .navigation {
   background-color: rgba(255, 255, 255, 0.75);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
   backdrop-filter: blur(12px);
@@ -40,15 +48,14 @@ main {
 
 .black {
   font-weight: 900;
-  letter-spacing: -0.011em;
+  letter-spacing: var(--ls-heading);
 }
 
 .caps {
   text-transform: uppercase;
 }
 
-body,
-p {
+body {
   font-size: 18px;
 }
 
@@ -64,55 +71,66 @@ p {
 
 h1 {
   font-size: 3em;
+  font-weight: var(--font-weight-title);
+  letter-spacing: var(--ls-heading);
 }
 h2 {
   font-size: 2.5em;
+  font-weight: var(--font-weight-title);
+  letter-spacing: var(--ls-heading);
 }
 h3 {
   font-size: 2em;
+  font-weight: var(--font-weight-title);
+  letter-spacing: var(--ls-heading);
 }
 h4 {
   font-size: 1.5em;
+  font-weight: var(--font-weight-title);
+  letter-spacing: var(--ls-heading);
 }
 h5 {
   font-size: 1.25em;
+  font-weight: var(--font-weight-title);
+  letter-spacing: var(--ls-heading);
 }
 
-a, a:link:visited:active {
+a,
+a:link:visited:active {
   color: inherit;
   text-decoration: none;
 }
 
 a:hover {
   color: var(--link-color-hover);
+  font-style: italic;
 }
 
 /* Basic */
 
 .item {
   position: relative;
-  display: flex;
-  align-items: stretch;
-  width: 100%;
+  width: 100vw;
+  height: calc(100vw / 2);
+  overflow: hidden;
 }
 
 .item--bg {
   background-color: rgba(0, 0, 0, 0.2);
-  height: 500px;
 }
 
 .item-img {
   display: block;
-  height: 100%;
-  width: 100%;
+  height: 100vw;
 }
 
 .item-img canvas {
-  height: 100%;
+  height: 100vw;
+  width: 100%;
 }
 
 .item-img img {
-  height: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -130,4 +148,18 @@ a:hover {
 
 .item-img img {
   display: none;
+}
+
+@media (max-width: 48em) {
+  .navigation {
+    border-bottom: 2px solid black;
+  }
+
+  main,
+  footer {
+    padding: 40px;
+  }
+  .item {
+    height: 100vw;
+  }
 }
